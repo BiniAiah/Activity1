@@ -203,8 +203,8 @@ No installation, dependencies, or build step are required.
 - PWA icons are SVG; add PNG sizes if you need stricter installability
 
 ## Author
-**@BiniAiah** — BSIT 4-A
-Course: AP6
+**@your-github-handle** — BSIT 4-A
+Course: AP6 — Activity 1
 
 ## License
 This project is for educational purposes as part of AP6.
