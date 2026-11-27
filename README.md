@@ -1,4 +1,4 @@
-# JohnMac's Hospital — AP6 Activity 1
+# JohnMacs's Hospital
 
 A responsive, installable hospital web app built with **HTML5, CSS3, and vanilla JavaScript
 (ES modules)**. It demonstrates core JavaScript fundamentals and two design patterns through a
@@ -9,6 +9,7 @@ working patient-registration flow, and ships as a Progressive Web App.
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![PWA](https://img.shields.io/badge/PWA-Service%20Worker-5A0FC8?style=flat&logo=pwa&logoColor=white)
 ![Font Awesome](https://img.shields.io/badge/Font%20Awesome-6.5.2-528DD7?style=flat&logo=fontawesome&logoColor=white)
+[![GitHub](https://img.shields.io/badge/GitHub-BiniAiah%2FActivity1-181717?style=flat&logo=github&logoColor=white)](https://github.com/BiniAiah/Activity1)
 
 ## Table of Contents
 - [Overview](#overview)
@@ -26,7 +27,7 @@ working patient-registration flow, and ships as a Progressive Web App.
 - [License](#license)
 
 ## Overview
-JohnMac's Hospital is a single-page website for a fictional hospital. Visitors can browse
+JohnMacs's Hospital is a single-page website for a fictional hospital. Visitors can browse
 featured doctors, view services and prices, and register as a patient. Content is driven by
 JavaScript data, the UI is split into ES modules, and the patient flow is built with a
 **Factory function** and a **Singleton** to show clean object creation and shared state.
@@ -154,8 +155,10 @@ export class AppStore {
 The app uses ES modules and a service worker, which require an `http://` origin, so run it
 through the included dev server instead of opening `index.html` directly.
 
+Repository: [github.com/BiniAiah/Activity1](https://github.com/BiniAiah/Activity1)
+
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/BiniAiah/Activity1.git
 cd Activity1
 node scripts/dev-server.js
 ```
@@ -200,8 +203,8 @@ No installation, dependencies, or build step are required.
 - PWA icons are SVG; add PNG sizes if you need stricter installability
 
 ## Author
-**@your-github-handle** — BSIT 4-A
-Course: AP6 — Activity 1
+**@BiniAiah** — BSIT 4-A
+Course: AP6
 
 ## License
-This project is for educational purposes as part of AP6 Activity 1.
+This project is for educational purposes as part of AP6.
