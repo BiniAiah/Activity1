@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JohnMac's Hospital — quality care, modern services, and trusted doctors.">
+  <meta name="theme-color" content="#0b3d5f">
+  <title>JohnMac's Hospital | Quality Care for Every Family</title>
+  <!-- App icon + PWA manifest -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <!-- Font Awesome: pinned version + Subresource Integrity (SRI) -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- Modular stylesheets (loaded in cascade order) -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/views.css">
+</head>
+<body>
+
+  <!-- ===== TOP INFO BAR ===== -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span><i class="fa-solid fa-phone" aria-hidden="true"></i> (02) 8123-4567</span>
+      <span><i class="fa-solid fa-envelope" aria-hidden="true"></i> care@johnmacshospital.ph</span>
+      <span class="topbar-right"><i class="fa-regular fa-clock" aria-hidden="true"></i> Open 24/7 — Emergency always available</span>
+    </div>
+  </div>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <!-- Logo: cross icon + hospital name (required) -->
+      <a href="#top" class="brand">
+        <span class="brand-cross"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+        <span class="brand-text">JohnMac's <strong>Hospital</strong></span>
+      </a>
+      <!-- Simple navigation -->
+      <nav>
+        <a href="#doctors">Doctors</a>
+        <a href="#register">Register</a>
+        <a href="#services">Services</a>
+        <a href="#patterns">Patterns</a>
+        <a href="#objectives">Objectives</a>
+      </nav>
+      <a href="#register" class="btn btn-emergency"><i class="fa-solid fa-calendar-plus" aria-hidden="true"></i> Book Appointment</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="badge"><i class="fa-solid fa-star" aria-hidden="true"></i> Trusted since 1998</span>
+        <h1>Compassionate care,<br>modern medicine.</h1>
+        <p>JohnMac's Hospital combines experienced doctors, fair prices, and a patient-first promise — for your whole family.</p>
+        <div class="hero-actions">
+          <a href="#register" class="btn btn-primary">Register as Patient</a>
+          <a href="#doctors" class="btn btn-ghost">Meet Our Doctors</a>
+        </div>
+        <!-- Trust stats -->
+        <div class="hero-stats">
+          <div><strong>25+</strong><span>Years of care</span></div>
+          <div><strong>40+</strong><span>Specialists</span></div>
+          <div><strong>15k+</strong><span>Happy patients</span></div>
+        </div>
+      </div>
+      <!-- Appointment / emergency card -->
+      <div class="hero-card">
+        <h3><i class="fa-solid fa-truck-medical" aria-hidden="true"></i> Emergency?</h3>
+        <p class="hero-phone">(02) 8123-4567</p>
+        <p class="muted">24/7 emergency hotline. Walk-ins welcome.</p>
+        <hr>
+        <h4><i class="fa-regular fa-clock" aria-hidden="true"></i> Visiting Hours</h4>
+        <ul class="hours">
+          <li><span>Mon – Fri</span><span>8:00 AM – 8:00 PM</span></li>
+          <li><span>Saturday</span><span>9:00 AM – 5:00 PM</span></li>
+          <li><span>Sunday</span><span>10:00 AM – 4:00 PM</span></li>
+        </ul>
+        <a href="#services" class="btn btn-primary btn-block">View Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="container">
+
+    <!-- Doctors section: filled by JavaScript from the doctors array -->
+    <section id="doctors" class="panel">
+      <div class="section-head">
+        <span class="eyebrow">Our Team</span>
+        <h2>Meet Our Doctors</h2>
+        <p class="muted">Rendered automatically from a JavaScript array of objects.</p>
+      </div>
+      <div id="doctor-list" class="card-grid">
+        <!-- Doctor cards will appear here -->
+      </div>
+    </section>
+
+    <!-- Patient registration section -->
+    <section id="register" class="panel">
+      <div class="section-head">
+        <span class="eyebrow">Admissions</span>
+        <h2>Patient Registration</h2>
+        <p class="muted">Fill in the form — new patients are added to the array with <code>push()</code>.</p>
+      </div>
+
+      <div class="register-grid">
+        <!-- Form to add a new patient to the patients array -->
+        <form id="patient-form" class="form-card">
+          <label for="patient-name">Full Name</label>
+          <input type="text" id="patient-name" placeholder="e.g. Juan Dela Cruz" required>
+
+          <label for="patient-age">Age</label>
+          <input type="number" id="patient-age" placeholder="e.g. 32" min="0" max="130" required>
+
+          <label for="patient-condition">Reason for Visit</label>
+          <input type="text" id="patient-condition" placeholder="e.g. Check-up, Flu, Follow-up" required>
+
+          <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-plus" aria-hidden="true"></i> Register Patient</button>
+          <p id="form-message" class="form-message" aria-live="polite"></p>
+        </form>
+
+        <!-- Registered patients list -->
+        <div class="list-card">
+          <div class="list-head">
+            <h3>Registered Patients</h3>
+            <span id="patient-count" class="count-pill">0</span>
+          </div>
+          <p class="muted small">Click the button to display everyone in the array.</p>
+          <!-- Button to show all registered patients -->
+          <button id="show-patients-btn" class="btn btn-secondary btn-block">Display All Patients</button>
+          <ul id="patient-list" class="patient-list">
+            <li class="empty">No patients displayed yet.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services section: filled by JavaScript from an object/array -->
+    <section id="services" class="panel">
+      <div class="section-head">
+        <span class="eyebrow">What We Offer</span>
+        <h2>Our Services</h2>
+        <p id="hospital-info" class="info-banner"><!-- Hospital info object will appear here --></p>
+      </div>
+      <div id="services-list" class="card-grid">
+        <!-- Service cards will appear here -->
+      </div>
+    </section>
+
+    <!-- System design patterns: Singleton + Factory -->
+    <section id="patterns" class="panel">
+      <div class="section-head">
+        <span class="eyebrow">Design Patterns</span>
+        <h2>System Design Patterns</h2>
+        <p class="muted">One shared hospital instance (Singleton) and one reusable patient builder (Factory).</p>
+      </div>
+      <div class="pattern-grid">
+        <div class="pattern-card">
+          <span class="pattern-tag">Singleton</span>
+          <h3 id="singleton-name">JohnMac's Hospital</h3>
+          <p id="singleton-info" class="muted small"></p>
+          <p id="singleton-count" class="pattern-metric"></p>
+        </div>
+        <div class="pattern-card">
+          <span class="pattern-tag">Factory</span>
+          <h3>createPatient()</h3>
+          <p class="muted small">Every registration builds a new patient object through the factory function.</p>
+          <p id="factory-last" class="pattern-metric"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning objectives section (required list) -->
+    <section id="objectives" class="panel objectives">
+      <div class="section-head">
+        <span class="eyebrow">Course Project</span>
+        <h2>JavaScript Basic Course Objectives</h2>
+        <p class="muted">Six topics, one variation each:</p>
+      </div>
+      <ul class="objectives-grid">
+        <li><span class="obj-icon"><i class="fa-solid fa-cube" aria-hidden="true"></i></span><strong>Variables</strong><span>const &amp; let, primitives</span></li>
+        <li><span class="obj-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span><strong>Arrays</strong><span>Literal + push() + for loop</span></li>
+        <li><span class="obj-icon"><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i></span><strong>Objects</strong><span>Literal + dot notation + method</span></li>
+        <li><span class="obj-icon"><i class="fa-solid fa-gears" aria-hidden="true"></i></span><strong>Functions</strong><span>Declarations with return</span></li>
+        <li><span class="obj-icon"><i class="fa-solid fa-industry" aria-hidden="true"></i></span><strong>Factory</strong><span>Function returning an object</span></li>
+        <li><span class="obj-icon"><i class="fa-solid fa-lock" aria-hidden="true"></i></span><strong>Singleton</strong><span>IIFE + getInstance()</span></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand"><span class="brand-cross"><i class="fa-solid fa-plus" aria-hidden="true"></i></span> JohnMac's Hospital</p>
+        <p class="muted-light">Quality, affordable healthcare for every Filipino family.</p>
+      </div>
+      <div>
+        <p class="footer-title">Contact</p>
+        <p class="muted-light">123 Health St., Manila<br>(02) 8123-4567<br>care@johnmacshospital.ph</p>
+      </div>
+      <div>
+        <p class="footer-title">Hours</p>
+        <p class="muted-light">Emergency: 24/7<br>Clinic: Mon – Sat, 8AM – 5PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 JohnMac's Hospital. Learning project for JavaScript Basics.</div>
+  </footer>
+
+  <!-- ES module entry point (wires data, patterns, UI, and events) -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="JohnMac's Hospital logo">
+  <rect width="512" height="512" rx="96" fill="#0b3d5f"/>
+  <circle cx="256" cy="256" r="168" fill="none" stroke="#00bfa6" stroke-width="24"/>
+  <path d="M232 128h48v104h104v48H280v104h-48V280H128v-48h104z" fill="#ffffff"/>
+</svg>

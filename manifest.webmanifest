@@ -1,0 +1,25 @@
+{
+  "name": "JohnMac's Hospital",
+  "short_name": "JohnMac's",
+  "description": "Quality care, modern services, and trusted doctors.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f4f9fc",
+  "theme_color": "#0b3d5f",
+  "icons": [
+    {
+      "src": "./assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/img/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

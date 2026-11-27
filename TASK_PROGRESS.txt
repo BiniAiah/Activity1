@@ -1,0 +1,42 @@
+JohnMac's Hospital — AP6 Activity 1
+Implementation status and verification ledger
+================================================
+
+[STATUS] Frontend modularization + PWA — COMPLETE
+
+Structure
+---------
+[OK] css/ split into variables, reset, layout, components, views
+[OK] js/data (doctors, services) — plain catalogs
+[OK] js/patterns (factory, singleton) — formal patterns
+[OK] js/services/api.js — fetch /api/v1/* with local fallback
+[OK] js/ui (render, router, modal, toast)
+[OK] js/utils (helpers, manilaTime)
+[OK] js/app.js — bootstrapper and event wiring
+[OK] sw.js + manifest.webmanifest + assets/img
+[OK] scripts/dev-server.js + dev.bat
+
+Automated checks (this session)
+-------------------------------
+[OK] node --check on all ES modules (via .mjs copies)
+[OK] node --check on sw.js and scripts/dev-server.js
+[OK] DOM-stub runtime test: doctors=4, services=4, registration updates
+     count/singleton/factory, toast shows, patient list renders,
+     modal opens and closes on Escape
+[OK] Dev server: index, CSS, JS, manifest, sw.js, icons return 200;
+     /api/v1/* returns 404 (bypass) as intended
+
+Manual browser checks (still to do)
+-----------------------------------
+[ ] Open http://localhost:5173 via dev.bat
+[ ] Confirm no console errors
+[ ] Service worker registers (DevTools > Application > Service Workers)
+[ ] Install prompt / manifest loads without warnings
+
+Notes
+-----
+- Frontend-only build: no backend, database, or test suite (out of scope).
+- API calls to /api/v1/* intentionally 404 and fall back to local data.
+- Font Awesome loads from CDN; icons require an internet connection.
+- PWA icons are SVG; some platforms may prefer PNG for install prompts.
+- Bump CACHE_VERSION in sw.js whenever cached assets change.

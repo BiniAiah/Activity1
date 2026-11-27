@@ -1,0 +1,22 @@
+/* =====================================================
+   JohnMac's Hospital — design tokens
+   Single source of truth for color, radius, and shadow.
+   Loaded first so every other stylesheet can use var().
+   ===================================================== */
+
+:root {
+  --blue-900: #0b3d5f;
+  --blue-700: #0277bd;
+  --blue-600: #0288d1;
+  --blue-100: #b3e5fc;
+  --blue-50: #e8f4f8;
+  --bg: #f4f9fc;
+  --card: #ffffff;
+  --text: #243b53;
+  --muted: #62748a;
+  --accent: #00bfa6;      /* teal accent for badges */
+  --danger: #e53935;      /* emergency red */
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(2, 119, 189, 0.10);
+  --shadow-hover: 0 16px 40px rgba(2, 119, 189, 0.18);
+}
